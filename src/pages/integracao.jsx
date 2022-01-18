@@ -14,7 +14,8 @@ export default function Integracao(){
 
     // Usando código sícrono -> async/await
     async function obterCliente() {
-        const resp = await fetch(`http://localhost:3000/api/clients/${codigo}`);
+        const resp = await fetch(`https://app-next-seven.vercel.app/api/clients/${codigo}`);
+        // https://app-next-seven.vercel.app/
         const dados = await resp.json();
         setCliente(dados);
     }
